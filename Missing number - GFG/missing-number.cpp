@@ -25,10 +25,9 @@ int main()
 int missingNumber(int A[], int N)
 {
     // Your code goes here
-    int result = N*(N+1)/2;
-    //int n = A.length;
-    for(int i = 0; i<N-1; i++){
-        result -= A[i];
-    }
-    return result;
+  int result = N*(N+1)/2; // sum of N numbers;
+  for(int i = 0; i<N-1; i++){
+      result -= A[i];
+  }
+  return result;
 }
