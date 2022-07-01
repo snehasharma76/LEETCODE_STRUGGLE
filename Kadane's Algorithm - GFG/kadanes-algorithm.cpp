@@ -10,7 +10,7 @@ class Solution{
     // n: size of array
     //Function to find the sum of contiguous subarray with maximum sum.
     long long maxSubarraySum(int A[], int n){
-     int maxsum = A[0];
+     int maxresult = A[0];
 
     int sum = A[0];
 
@@ -18,11 +18,11 @@ class Solution{
 
         sum = max(sum+A[i], A[i]);
 
-        maxsum = max(sum, maxsum);
+        maxresult = max(sum, maxresult);
 
     }
 
-    return maxsum;
+    return maxresult;
 
 }
 
