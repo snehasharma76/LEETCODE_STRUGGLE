@@ -15,20 +15,19 @@ class Solution{
     vector<int> countEleLessThanOrEqual(int arr1[], int arr2[], 
                                  int m, int n)
     {
-       
-         vector<pair<int,int>> result;
+       vector<pair<int,int>> tmp;
         for(int i=0;i<m;i++){
-            result.push_back({arr1[i],i});
+            tmp.push_back({arr1[i],i});
         }
-        sort(result.begin(),result.end());
+        sort(tmp.begin(),tmp.end());
         sort(arr2,arr2+n);
         int j = 0,count = 0;
         vector<int> ans(m);
         for(int i=0;i<m;i++){
-            while(j<n and arr2[j]<=result[i].first){
+            while(j<n and arr2[j]<=tmp[i].first){
                 j++;
             }
-            ans[result[i].second] = j;
+            ans[tmp[i].second] = j;
         }
         return ans;
     }
