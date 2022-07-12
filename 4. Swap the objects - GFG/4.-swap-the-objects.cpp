@@ -68,7 +68,10 @@ int main() {
 void swapper(Person **obj1, Person **obj2)
 {
     //Your code here
-    swap(*obj1,*obj2);
+  Person *p3 = new Person();
+   p3 = *obj1;
+   *obj1 = *obj2;
+   *obj2 = p3;
    
 }
 
