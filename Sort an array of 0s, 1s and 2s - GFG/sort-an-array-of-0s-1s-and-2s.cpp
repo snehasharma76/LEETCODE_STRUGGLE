@@ -10,9 +10,22 @@ class Solution
     public:
     void sort012(int a[], int n)
     {
-        // code here 
-       sort(a,a+n);
+        
+       map<int,int>X;
+       for(int i=0;i<n;i++){
+           X[a[i]]++;
+       }
+       vector<int>vec;
+       for(pair<int,int> i:X){
+           while(i.second--) vec.push_back(i.first);
+       }
+       
+       for(int i=0;i<n;i++) a[i]=vec[
+i];
+       
     }
+    
+
 
     
 };
