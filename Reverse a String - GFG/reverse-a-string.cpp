@@ -33,7 +33,7 @@ string reverseWord(string str){
     int n = str.length();
     string st = "";
     for(int i = n-1; i>=0; i--){
-        st+=str[i];
+       st.push_back(str[i]);
     }
     return st;
   //Your code here
